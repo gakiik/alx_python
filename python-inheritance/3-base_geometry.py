@@ -5,16 +5,14 @@
 Define an empty class BaseGeometry.
 """
 
-
 class BaseGeometry:
     """
     An empty class representing BaseGeometry.
     """
     pass
 
-
 if __name__ == "__main__":
     bg = BaseGeometry()
     print(bg)
-    print(vars(bg))
-    print(vars(BaseGeometry))
+    print(dir(bg))
+    print(dir(BaseGeometry))
