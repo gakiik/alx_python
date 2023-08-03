@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""Square module.
+
+This module defines the Square class, which represents a square with a private size attribute.
+"""
+
+
 class Square:
     """Represents a square with a private size attribute.
 
@@ -7,6 +14,10 @@ class Square:
     Methods:
         __init__(self, size=0): Initialize the Square instance with an optional size.
         area(self): Calculate the area of the square.
+
+    Raises:
+        TypeError: If the size is not an integer.
+        ValueError: If the size is less than 0.
     """
 
     def __init__(self, size=0):
