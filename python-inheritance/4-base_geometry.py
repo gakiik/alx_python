@@ -17,6 +17,15 @@ class BaseGeometry:
         """
         raise Exception("area() is not implemented")
 
+    def __dir__(self):
+        """
+        Override the dir() method to include the area() method in the list of attributes for the instance.
+        """
+        attributes = super().__dir__()
+        # Add area() to the list of attributes for the instance
+        attributes.append('area')
+        return attributes
+
 
 if __name__ == "__main__":
     bg = BaseGeometry()
@@ -24,3 +33,4 @@ if __name__ == "__main__":
         print(bg.area())
     except Exception as e:
         print("[{}] {}".format(e.__class__.__name__, e))
+    print(dir(bg))
